@@ -1,7 +1,7 @@
 ---
 name: vector-genealogy
 description: Генеалогия ex-СССР по архивам — доказательная цепочка и отчёт.
-version: 1.1.0
+version: 1.2.0
 author: Hermes Agent
 license: MIT
 compatibility: Нужны веб-поиск, браузер (часть архивов не отдаётся простому HTTP-клиенту), чтение PDF/DOCX/сканов и запись файлов. Скрипты — только стандартная библиотека Python 3.
@@ -9,7 +9,7 @@ metadata:
   hermes:
     tags: [генеалогия, архивы, метрические-книги, GEDCOM, ex-СССР, репрессии, Первая-мировая]
     related_skills: [vector-gene, github-repo-research, doc-and-pdf]
-    upstream: DenisSergeevitch/ex-ussr-kinship-research@1.30.0
+    upstream: DenisSergeevitch/ex-ussr-kinship-research@1.37.0
     reply_language: user
 ---
 
@@ -155,16 +155,12 @@ python3 scripts/build_pdf.py --html report.html
 ### Attribution
 
 Навык заимствован из [ex-ussr-kinship-research](https://github.com/DenisSergeevitch/ex-ussr-kinship-research)
-(MIT, © 2026 Denis Shiryaev), версия 1.30.0. Оттуда взяты: полная процедура
-(`references/upstream-procedure.md`), справочники, скрипты, шаблоны дел и отчётов, эвалы и тесты —
-без изменений. Добавлено нами: проверка доступности источников с датой и кодами ответа,
-список территорий, короткий маршрут работы и раздел с граблями. Текст лицензии —
-`THIRD_PARTY_LICENSES/DenisSergeevitch-ex-ussr-kinship-research.txt`.
+(MIT, © 2026 Denis Shiryaev). Справочники, скрипты, эвалы, тесты, шаблоны дел и отчётов взяты
+из апстрима версии 1.37.0; полная процедура сохранена как `references/upstream-procedure.md`.
+Текст лицензии — `THIRD_PARTY_LICENSES/DenisSergeevitch-ex-ussr-kinship-research.txt`.
 
-Обновление 1.1.0 — точечный порт из апстрима 1.32–1.36 (не полный переход на 1.37):
-`references/metric-books-scans.md`, `scripts/scan_montage.py` с перезапуском с кадра и
-отчётом о пропущенных изображениях, `tests/test_scan_montage.py`, разделы
-«Возобновление и сохранение дела» и «Длительное чтение сканов» в
-`references/research-coordination.md`. Наше: «Точка продолжения» в шаблоне
-`research-state.md`, стартовый промпт в SKILL.md и `scripts/coverage_summary.py`
-со сводкой «заведено / оценено / блокировки».
+Добавлено нами (не из апстрима): проверка доступности источников с датой и кодами ответа
+(`references/sources-ru.md`), список территорий и юрисдикций (`references/territories.md`),
+короткий маршрут работы и раздел с граблями в SKILL.md, стартовый промпт, «Точка продолжения»
+в шаблоне `research-state.md` и `scripts/coverage_summary.py` со сводкой
+«заведено / оценено / блокировки».
